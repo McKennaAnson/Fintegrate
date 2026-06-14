@@ -40,7 +40,7 @@ numpy`
   -rm data/gsh_data/danRer11_rm.bed \
   -f data/gsh_data/danRer11_seq.fa`
   
-### Exclusion Distances
+### Flank Distances
 | Feature | Distance (bp) |
 | ------- | ------------- |
 | Gene | 5,000 |
