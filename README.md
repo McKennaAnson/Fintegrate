@@ -30,7 +30,7 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 ### Usage
 * `gsh_python.sh` needs to be in the folder download from [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q) titled `danRer_data`
 
-> `python gsh_python.py -chro danRer11_chromL.txt -genes danRer11_gene.gtf -onco danRer11_onco.txt -enh danRer11_enh.bed -cent danRer11_cent.gtf -gap danRer11_gap.txt -lnc danRer11_lnc.bed -mi danRer11_mi.bed -t danRer11_t.gtf -rm danRer11_rm.bed -f danRer11_seq.fa`
+> `python gsh_python.py -chro danRer_data/danRer11_chromL.txt -genes danRer_data/danRer11_gene.gtf -onco danRer_data/danRer11_onco.txt -enh danRer_data/danRer11_enh.bed -cent danRer_data/danRer11_cent.gtf -gap danRer_data/danRer11_gap.txt -lnc danRer_data/danRer11_lnc.bed -mi danRer_data/danRer11_mi.bed -t danRer_data/danRer11_t.gtf -rm danRer_data/danRer11_rm.bed -f danRer_data/danRer11_seq.fa`
   
 ### Flank Distances
 | Feature | Distance (bp) |
