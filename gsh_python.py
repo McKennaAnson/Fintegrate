@@ -244,7 +244,7 @@ def subtract_rm(safe_harbors, rmsk_path, chromo_file):
     #filter results to regions larger than 100 bp
     df = df[df['End'] - df['Start'] > 100].reset_index(drop=True)
     df['Size in bp'] = df['End'] - df['Start']
-    df.to_csv('safe_harbors_rm.tsv', sep='\t', index=False)
+    df.to_csv('safeharbors_rm.tsv', sep='\t', index=False)
 
     print(f"{' DONE: safeharbors with subtracted RepeatMasker coordinates saved to safeharbors_rm.tsv ':=^60}")
     
