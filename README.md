@@ -21,15 +21,15 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 | `danRer11_rm.bed` | RepeatMasker Coordinates | v11 | [UCSC](https://genome.ucsc.edu/cgi-bin/hgTables?db=danRer11&hgta_group=varRep&hgta_track=rmsk&hgta_table=rmsk) |  BED | 
 
 ### Requirements
-`pandas
-pybedtools
-pyranges==0.0.129
-pyfaidx
-numpy`
+`pandas`
+`pybedtools`
+`pyranges==0.0.129`
+`pyfaidx`
+`numpy`
 
 ### Usage
-`python gsh_python.py \
-  -chro danRer_data/danRer11_chromL.txt \
+`python gsh_python.py \ `
+  ` -chro danRer_data/danRer11_chromL.txt \ `
   -genes danRer_data/danRer11_gene.gtf \
   -onco danRer_data/danRer11_onco.txt \
   -enh danRer_data/danRer11_enh.bed \
