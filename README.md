@@ -9,7 +9,7 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 | File Name | Datatype | Assembly | Download Location | Coordinate Type | Notes |
 | --------- | -------- | -------- |------------------ | --------------- | ----- |
 | `danRer11_chromL.txt` | Lengths of the chromsomes | v11 | [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/035/GCF_000002035.6_GRCz11/) | NA |
-| `danRer11_gene.gtf`   | Gene coordinates | v11 | [Ensembl Database](http://ensembl.org/) | GTF 
+| `danRer11_gene.gtf`   | Gene coordinates | v11 | [Ensembl Database](https://ftp.ensembl.org/pub/release-116/gtf/danio_rerio/) | GTF 
 | `danRer11_seq.fa`     | Primary assembly | v11 | [Ensembl Database](http://ensembl.org/) |  | 
 | `danRer11_enh.bed`    | Enhancer coordinates | v10 → v11 | [EnhancerAtlas2.0](https://ngdc.cncb.ac.cn/databasecommons/database/id/7011) | BED | Convert to v11 using [LiftOver](https://genome.ucsc.edu/cgi-bin/hgLiftOver)
 | `danRer11_lnc.bed`    | lncRNA coordinates | v7 → v11  | [ZFLS](https://old.biochen.org/zflnc/) | BED | Convert to BED format then use [Liftover](https://genome.ucsc.edu/cgi-bin/hgLiftOver) to convert to v11 assembly | 
