@@ -1,10 +1,11 @@
 # Genomic-Safeharbors-Danio-Rerio-Zebrafish
 
 ### Overview
-The method for finding genomic safeharbors computationally for *Danio rerio* (Zebrafish) follows the workflow outline in [Discovery and validation of human genomic safe harbor sites for gene and cell therapies](https://pmc.ncbi.nlm.nih.gov/articles/PMC9017210/).
-
+The method for finding genomic safeharbors (GSH) computationally for *Danio rerio* (Zebrafish) follows the workflow outline in [Discovery and validation of human genomic safe harbor sites for gene and cell therapies](https://pmc.ncbi.nlm.nih.gov/articles/PMC9017210/). Two additional steps have been added to this pipeline. Once the GSH canadiates have been computationally generated, low complexity regions and non-unique sequences are excluded.
+* **Low complexity regions** are excluded by adding [RepeatMasker](https://www.repeatmasker.org/) regions to the regions to avoid. RepeatMasker data for *Danio rerio* was downloaded from [UCSC](https://genome.ucsc.edu/cgi-bin/hgTables?db=danRer11&hgta_group=varRep&hgta_track=rmsk&hgta_table=rmsk) (see Dataset table below).
+* **Non-unique sequences** were excluded by running a local BLAST on all GSH canadiate sequences and adding the regions of said canadiates that returned a BLAST hit (not including self hits) to the regions to avoid. This step is meant to narrow down the GSH canadiates to only regions with unique sequences, to allow for precise targeting. 
 ### Dataset 
-All cleaned and processed data is avaliable to download from here: [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q)
+All cleaned and processed data is avaliable to download from here: [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q) 
 
 | File Name | Datatype | Assembly | Download Location | Coordinate Type | Notes |
 | --------- | -------- | -------- |------------------ | --------------- | ----- |
@@ -28,7 +29,7 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 `numpy`
 
 ### Usage
-* The data sets in the folder `danRer_data`, which is dowlaoded form the box [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q), needs to be in the same folder as gsh_python.py. 
+* The data sets in the folder `danRer_data`, which is dowlaoded from the box [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q), needs to be in the same folder as gsh_python.py. 
 > `python gsh_python.py -chro danRer_data/danRer11_chromL.txt -genes danRer_data/danRer11_gene.gtf -onco danRer_data/danRer11_onco.txt -enh danRer_data/danRer11_enh.bed -cent danRer_data/danRer11_cent.gtf -gap danRer_data/danRer11_gap.txt -lnc danRer_data/danRer11_lnc.bed -mi danRer_data/danRer11_mi.bed -t danRer_data/danRer11_t.gtf -rm danRer_data/danRer11_rm.bed -f danRer_data/danRer11_seq.fa`
   
 ### Flank Distances
@@ -48,8 +49,8 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 | -------- | ----------- |
 | safeharbors.tsv | Genomic coordinates of safeharbors with columns `Chromosome`, `Start`, `End` and `Size in BP` |
 | safeharbors_seqs.fasta | Sequences of the safeharbors |
-| safeharbors_rm.tsv | Genomic coordinates of safeharbors with RepeatMasker coordinates subtracted (columns `Chromosome`, `Start`, `End` and `Size in BP`) |
-| safeharbors_rm_seqs.fasta | Sequences of the safeharbors with RepeatMasker coordinates subtracted |
+| safeharbors_rm.tsv | Genomic coordinates of safeharbors with RepeatMasker coordinates added to regions to avoid (columns `Chromosome`, `Start`, `End` and `Size in BP`) |
+| safeharbors_rm_seqs.fasta | Sequences of the safeharbors with RepeatMasker coordinates added to regions to avoid |
 
 ## Optional BLAST Script
 ### Overview
