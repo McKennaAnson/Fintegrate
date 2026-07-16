@@ -3,7 +3,7 @@
 ### Overview
 The method for finding genomic safeharbors (GSH) computationally for *Danio rerio* (Zebrafish) follows the workflow outline in [Discovery and validation of human genomic safe harbor sites for gene and cell therapies](https://pmc.ncbi.nlm.nih.gov/articles/PMC9017210/). Two additional steps have been added to this pipeline. Once the GSH canadiates have been computationally generated, low complexity regions and non-unique sequences are excluded.
 * **Low complexity regions** are excluded by adding [RepeatMasker](https://www.repeatmasker.org/) regions to the regions to avoid. RepeatMasker data for *Danio rerio* was downloaded from [UCSC](https://genome.ucsc.edu/cgi-bin/hgTables?db=danRer11&hgta_group=varRep&hgta_track=rmsk&hgta_table=rmsk) (see Dataset table below).
-* **Non-unique sequences** were excluded by running a local BLAST on all GSH canadiate sequences and adding the regions of said canadiates that returned a BLAST hit (not including self hits) to the regions to avoid. This step is meant to narrow down the GSH canadiates to only regions with unique sequences, to allow for precise targeting. 
+* **Non-unique sequences** were excluded by running a local BLAST on all GSH canadiate sequences and adding the regions of said canadiates that returned a BLAST hit (not including self hits) to the regions to avoid. This step is meant to narrow down the GSH canadiates to only regions with unique sequences, which to allows for precise targeting. 
 ### Dataset 
 All cleaned and processed data is avaliable to download from here: [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q) 
 
