@@ -31,10 +31,8 @@ All cleaned and processed data is avaliable to download from here: [danioRer_dat
 ### Local BLAST
 A local *Danio rerio* BLAST database is required for this code to run. 
 1) Follow instructions to install command line BLAST from the [NIH](https://www.ncbi.nlm.nih.gov/books/NBK569861/)
-2) Download whole genome sequence from [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000002035.6/)
-    * Select the `RefSeq Only` and `Genome Sequences (FASTA)`
-3) Generate database:
-   `makeblastdb -in path/to/sequence/file/GCF_000002035.6_GRCz11_genomic.fna -input_type fasta -dbtype nucl -parse_seqids -out danRer11_db/danRer11`
+2) Generate database from Ensembl primary assembly file (`danRer11_seq.fa` see Dataset table above):
+   `makeblastdb -in danRer_data/danRer11_seq.fa -input_type fasta -dbtype nucl -parse_seqids -out danRer11_db/danRer11`
    
 ### Usage
 * The datasets in the folder `danRer_data` (downloaded from the box [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q))) needs to be in the same folder as gsh_python.py. 
