@@ -20,7 +20,7 @@ Fintegrate is a software to locate candidate genomic safe harbors in zebrafish, 
    * `safeharbors_rm_unique.tsv`: genomic coordinates of safeharbors with low-complexity regions and repeat DNA sequences excluded 
    * `safeharbors_rm_unique.fasta`: sequences of safeharbors with low-complexity regions and repeat DNA sequences excluded 
 
-### Dataset 
+### Datasets
 All cleaned and processed data is avaliable to download from here: [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q) 
 
 | File Name | Datatype | Assembly | Download Location | Coordinate Type | Notes |
