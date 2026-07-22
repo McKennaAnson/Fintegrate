@@ -1,4 +1,4 @@
-# Fintegrate: Genomic Safe Harbor Sites in Zebrafish
+# Fintegrate: Finding Genomic Safe Harbor Sites in Zebrafish
 
 ### Overview
 Fintegrate is a software to locate candidate genomic safe harbors in zebrafish, adapted from a similar study of human genomic safe harbors (Aznauryan, 2022).
