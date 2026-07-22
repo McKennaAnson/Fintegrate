@@ -49,9 +49,10 @@ A local *Danio rerio* BLAST database is required for this code to run.
 1) Follow instructions to install command line BLAST from the [NIH](https://www.ncbi.nlm.nih.gov/books/NBK569861/)
 2) Generate database from Ensembl primary assembly file (`danRer11_seq.fa` see Dataset table above):
    `makeblastdb -in danRer_data/danRer11_seq.fa -input_type fasta -dbtype nucl -parse_seqids -out danRer11_db/danRer11`
+3) `danRer11_db` must be in the same folder as `gsh_python.py`
    
 ### Usage
-* The folder `danRer_data` (downloaded from the box [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q)) needs to be in the same folder as gsh_python.py
+* The folder `danRer_data` (downloaded from the box [danioRer_data](https://iastate.box.com/s/njar9ckjgxg75in7k08fyxxaep3geo2q)) needs to be in the same folder as `gsh_python.py`
 > `python gsh_python.py -chro danRer_data/danRer11_chromL.txt -genes danRer_data/danRer11_gene.gtf -onco danRer_data/danRer11_onco.txt -enh danRer_data/danRer11_enh.bed -cent danRer_data/danRer11_cent.gtf -gap danRer_data/danRer11_gap.txt -lnc danRer_data/danRer11_lnc.bed -mi danRer_data/danRer11_mi.bed -t danRer_data/danRer11_t.gtf -rm danRer_data/danRer11_rm.bed -f danRer_data/danRer11_seq.fa -len 50`
   
 ### Flank Distances
